@@ -4,6 +4,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 from mysite.views import hello, current_time, hours_ahead
+from books.views import display_meta
+from books import views
 
 urlpatterns = patterns('',
     # Examples:
@@ -14,4 +16,7 @@ urlpatterns = patterns('',
     url(r'^hello/$', hello),
     url(r'^time/$', current_time),
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),
+    url(r'^display_meta/$', display_meta),
+    url(r'^search_form/$', views.search_form),
+    url(r'^search/$', views.search),
 )
