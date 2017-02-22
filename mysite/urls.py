@@ -10,8 +10,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'mysite.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    #url(r'^admin/', include(admin.site.urls)),
-    (r'^hello/$', hello),
-    (r'^time/$', current_time),
-    (r'^time/plus/(\d{1,2})/$', hours_ahead),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^hello/$', hello),
+    url(r'^time/$', current_time),
+    url(r'^time/plus/(\d{1,2})/$', hours_ahead),
 )
